@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");
+$white: #FFF;
+$black: #000;
+$slide: #efd2ca;
+$red: #ff0000;
+$rose: #EF6F7F;
+$model: #fcf4e8;
+$blue: #3e8edd;
+
+.filtro{
+    width: 20%;
+    height: 100vh;
+    background: $black;
+    position: fixed;
+    float: left;
+    z-index: 0;
+}
+
+.libros{
+    width: 100%;
+    background: $rose;
+    float: left;
+    padding-left: 20%;
+    display: flex;
+}
+
+footer {
+    width: 100%;
+    background: $rose;
+    z-index: 1000;
+}

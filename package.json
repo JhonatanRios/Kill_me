@@ -1,0 +1,19 @@
+{
+  "name": "taller2",
+  "version": "1.0.0",
+  "description": "Tienda de Melanie",
+  "main": "productos.js",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon killme.js",
+    "mongo": "C:/\"Program Files\"/MongoDB/Server/3.4/bin/mongod"
+  },
+  "author": "Jhonatan Rios",
+  "license": "ISC",
+  "dependencies": {
+    "consolidate": "^0.15.1",
+    "express": "^4.16.3",
+    "handlebars": "^4.0.11",
+    "mongodb": "^3.0.7",
+    "nodemon": "^1.17.3"
+  }
+}

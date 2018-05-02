@@ -1,0 +1,124 @@
+﻿{
+    "libros": [
+        {
+            "nombre": "Kill me",
+            "autor": "Melanie Cockroft",
+            "editorial": "Editorial Cultiva Libros S.L.",
+            "paginas": 209,
+            "idioma": "English",
+            "tematica": "Drama",
+            "año": 2016,
+            "precio": 25,
+            "calificacion": 5,
+            "libro": "img/venta/libkill.png"
+        },
+        {
+            "nombre": "El principito",
+            "autor": "Antoine de Saint-Exupéry",
+            "editorial": "Salamandra",
+            "paginas": 96,
+            "language": "All",
+            "tematica": "Fábula, Ficción, Literatura infantil, Novela corta, Ficción especulativa",
+            "año": 1943,
+            "precio": 0,
+            "calificacion": 5,
+            "libro": "img/venta/libprincipito.png"
+        },
+        {
+            "nombre": "Libro rojo de Mao",
+            "autor": "Mao Zedong",
+            "editorial": "Shanghai People's Press",
+            "paginas": 352,
+            "language": "English",
+            "tematica": "Filosofía política",
+            "año": 1964,
+            "precio": 8,
+            "calificacion": 3,
+            "libro": "img/venta/librojo.png"
+        },
+        {
+            "nombre": "Harry Potter y las reliquias de la muerte",
+            "autor": "J.K. Rowling",
+            "editorial": "Salamandra",
+            "paginas": 636,
+            "language": "English",
+            "tematica": "Narrativa infantil-juvenil",
+            "año": 2007,
+            "precio": 49,
+            "calificacion": 4,
+            "libro": "img/venta/libharry.png"
+        },
+        {
+            "nombre": "El Señor de los Anillos - Las dos torres",
+            "autor": "J. R. R. Tolkien",
+            "editorial": "Minotauro",
+            "paginas": 408,
+            "language": "English",
+            "tematica": "Fantasia",
+            "año": 1954,
+            "precio": 30,
+            "calificacion": 5,
+            "libro": "img/venta/libsenor.png"
+        },
+        {
+            "nombre": "El Código da Vinci",
+            "autor": "Dan Brown",
+            "editorial": "Planeta",
+            "paginas": 472,
+            "language": "English",
+            "tematica": "Narrativa",
+            "año": 2003,
+            "precio": 18,
+            "calificacion": 3,
+            "libro": "img/venta/libvinci.png"
+        },
+        {
+            "nombre": "El Alquimista",
+            "autor": "Paulo Coelho",
+            "editorial": "Planeta",
+            "paginas": 192,
+            "language": "All",
+            "tematica": "Misión, Ficción de aventuras, Literatura fantástica",
+            "año": 1988,
+            "precio": 18,
+            "calificacion": 2,
+            "libro": "img/venta/libalquimista.png"
+        },
+        {
+            "nombre": "Crepúsculo",
+            "autor": "Stephenie Meyer",
+            "editorial": "Editorial Cultiva Libros S.L.",
+            "paginas": 629,
+            "language": "English, French, Portuguese, Spanish, Italian",
+            "tematica": "Ficción adulto joven, Literatura fantástica, Novela rosa, Literatura de vampiros",
+            "año": 2007,
+            "precio": 14,
+            "calificacion": 3,
+            "libro": "img/venta/libcrepus.png"
+        },
+        {
+            "nombre": "Lo que el Viento se LLevó",
+            "autor": "Margaret Mitchell",
+            "editorial": "Macmillan Publishers",
+            "paginas": 1037,
+            "language": "English, French",
+            "tematica": "Drama",
+            "año": 1936,
+            "precio": 25,
+            "calificacion": 2,
+            "libro": "img/venta/libviento.png"
+        },
+        {
+            "nombre": "El diario de Ana Frank",
+            "autor": "Anna Frank",
+            "editorial": "Debolsillo",
+            "paginas": 217,
+            "language": "English, Spanish",
+            "tematica": "Autobiografía",
+            "año": 1947,
+            "precio": 20,
+            "calificacion": 3,
+            "libro": "img/venta/libdiario.png"
+        }
+    ]
+}
