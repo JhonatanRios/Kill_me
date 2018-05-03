@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Recommended</title>
 
     <!--Links para el Slide-->
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
@@ -13,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/component.css" />
 
     <!--Links para la galeria-->
-    <link rel="stylesheet" href="css\baguetteBox.css">
+    <link rel="stylesheet" href="css/baguetteBox.css">
 
     <!--Links para la Info del libro-->
     <link rel="stylesheet" href="css/styleline.css" media="screen" />
@@ -31,7 +32,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reco.css">
-    <link rel="stylesheet" href="ccs/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
 </head>
 
 <body>
@@ -57,10 +58,10 @@
 
     <section class="cuerpo">
         <div class="filtro">
-            <h2>Filtrar por marca:</h2>
-            <a href="/?marca=Honda">Honda</a>
-            <a href="/?marca=Yamaha">Yamaha</a>
-            <a href="/">Todas</a>
+            <h2>Filtrar por edito:</h2>
+            <a href="/?editorial=Salamandra">Salamandra</a>
+            <a href="/?editorial=Planeta">Planeta</a>
+            <a href="/reco">Todas</a>
 
             <h2>Filtrar por modelo:</h2>
             <a href="/?menor=10000000&mayor=20000000">XRE300</a>
@@ -72,6 +73,24 @@
             <input type="range" name="" id="slider" min="10" max="20">
             <input type="range" name="" id="sliderMax" min="10" max="20">
             <button>Buscar</button>
+
+            <footer class="mini">
+                <div class="cont-social">
+                    <a href="#">
+                        <i id="social-fb" class="fab fa-facebook-f social"></i>
+                    </a>
+                    <a href="#">
+                        <i id="social-tw" class="fab fa-twitter social"></i>
+                    </a>
+                    <a href="#">
+                        <i id="social-gp" class="fab fa-google-plus-g social"></i>
+                    </a>
+                    <a href="#">
+                        <i id="social-em" class="fas fa-envelope social"></i>
+                    </a>
+                </div>
+            </footer>
+
         </div>
         <div class="libros">
             {{#each libros}}
@@ -84,9 +103,11 @@
                                 background-size: contain;
                                 background-repeat: no-repeat;"></div>
                     <p>
-                        <b>{{paginas}}</b>
+                        <b>{{nombre}}</b>
                     </p>
-                    <p>{{nombre}}</p>
+                    <p>{{paginas}}</p>
+                    <p>{{idioma}}</p>
+                    <p>{{calificacion}}</p>
                 </a>
             </div>
             {{/each}}
@@ -94,22 +115,12 @@
 
     </section>
 
-    <footer>
-        <div class="cont-social">
-            <a href="#">
-                <i id="social-fb" class="fab fa-facebook-f social"></i>
-            </a>
-            <a href="#">
-                <i id="social-tw" class="fab fa-twitter social"></i>
-            </a>
-            <a href="#">
-                <i id="social-gp" class="fab fa-google-plus-g social"></i>
-            </a>
-            <a href="#">
-                <i id="social-em" class="fas fa-envelope social"></i>
-            </a>
-        </div>
-    </footer>
+    <script src="js/jquery-3.3.1.js"></script>
+    <!--JS de Menu-->
+    <script src="js/headroom.js"></script>
+
+    <!--JS de SweetAlert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script>
         console.log('hola cliente');
@@ -119,6 +130,43 @@
             e.preventDefault();
             location.href = '/?min=' + slider.value + '&max=' + sliderMax.value;
         })
+
+        $(function () {
+            var header = document.getElementById('header');
+            var headroom = new Headroom(header);
+            headroom.init();
+
+            //Menu Responsive
+            //Calculamos ancho de pagina
+            var ancho = $(window).width(),
+                enlaces = $('#enlaces'),
+                btnMenu = $('#btn-menu'),
+                icono = $('#btn-menu .icono');
+
+            if (ancho < 700) {
+                enlaces.hide();
+                icono.addClass('fa-bars');
+
+            }
+
+            btnMenu.on('click', function (e) {
+                enlaces.slideToggle();
+                icono.toggleClass('fa-bars');
+                icono.toggleClass('fa-times');
+            });
+
+            $(window).on('resize', function () {
+                if ($(this).width() > 700) {
+                    enlaces.show();
+                    icono.addClass('fa-times');
+                    icono.removeClass('fa-bars');
+                } else {
+                    enlaces.hide();
+                    icono.addClass('fa-bars');
+                    icono.removeClass('fa-times');
+                }
+            });
+        });
     </script>
 </body>
 

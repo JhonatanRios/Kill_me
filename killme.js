@@ -51,8 +51,8 @@ app.get('/reco', (req, res) => {
     var prod = db.collection('libros')
         .find();
     
-    if(req.query.marca)
-        prod.filter({ marca: req.query.marca });
+    if(req.query.editorial)
+        prod.filter({ editorial: req.query.editorial });
 
     if(req.query.modelo)
         prod.filter({ modelo: req.query.modelo });

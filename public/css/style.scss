@@ -42,7 +42,7 @@ header {
     background: $white;
     width: 100%;
     text-align: center;
-    z-index: 99;
+    z-index: 1000;
 }
 
 header .menu {
@@ -153,8 +153,7 @@ button {
 .cuerpo {
     width: 100%;
     position: relative;
-    padding-top: 0px;
-    display: flex;
+    padding-top: 50px;
 }
 
 .cuerpo .slide {
@@ -408,13 +407,11 @@ button {
         align-content: center;
         align-items: center;
         .titulo {
-            font-weight: 700;
-            font-size: 2.8em;
+            font-size: 1.8em;
             color: $white;
         }
         .sub {
-            margin-top: 10px;
-            font-size: 1.8em;
+            margin-top: 5px;
             color: $white;
         }
     }
@@ -683,11 +680,10 @@ footer .cont-social #social-em:hover {
             height: 150px;
             .titulo {
                 font-weight: 700;
-                font-size: 2.3em;
+                font-size: 1.8em;
             }
             .sub {
-                margin-top: 10px;
-                font-size: 1.5em;
+                margin-top: 5px;
             }
         }
         .correo {
