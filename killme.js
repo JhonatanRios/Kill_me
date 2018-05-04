@@ -64,6 +64,10 @@ app.get('/reco', (req, res) => {
         })
 });
 
+/*app.get('/contact', (req, res) => {
+    res.render('contact', {
+    });
+})*/
 
 app.get('/contact', (req, res) => {
     res.render('contact', {
