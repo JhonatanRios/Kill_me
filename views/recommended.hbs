@@ -7,6 +7,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{tittle}}</title>
+
+    <!--Links para el Slide-->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+
     <!--Links para la galeria-->
     <link rel="stylesheet" href="css/baguetteBox.css">
 
@@ -51,22 +57,41 @@
     </header>
 
     <section class="cuerpo">
+        <!--Parte Izquierda de la pantalla-->
         <div class="filtro">
-            <h2>Filtrar por Editorial:</h2>
-            <a href="/reco?editorial=Salamandra">Salamandra</a>
-            <a href="/reco?editorial=Planeta">Planeta</a>
-            <a href="/reco">Todas</a>
+            <div class="filbotones">
+                <div class="filtema">
+                    <h2>Filtrar por Editorial:</h2>
+                    <a href="/reco?editorial=Salamandra">Salamandra</a>
+                    <a href="/reco?editorial=Planeta">Planeta</a>
+                    <a href="/reco">Todas</a>
+                </div>
+                <div class="filidio">
+                    <h2>Filtrar por Editorial:</h2>
+                    <a href="/reco?editorial=Salamandra">Salamandra</a>
+                    <a href="/reco?editorial=Planeta">Planeta</a>
+                    <a href="/reco">Todas</a>
+                </div>
+                <div class="filedito">
+                    <h2>Filtrar por Editorial:</h2>
+                    <a href="/reco?editorial=Salamandra">Salamandra</a>
+                    <a href="/reco?editorial=Planeta">Planeta</a>
+                    <a href="/reco">Todas</a>
+                </div>
+            </div>
+            <div class="filbarras">
+                <div class="filprecio">
+                    <input type="range" name="" id="slider" min="10" max="20">
+                    <input type="range" name="" id="sliderMax" min="10" max="20">
+                    <button class="minMax">Buscar</button>
+                </div>
+                <div class="filano">
 
-            <h2>Filtrar por modelo:</h2>
-            <a href="/?menor=10000000&mayor=20000000">XRE300</a>
-            <a href="/?modelo=Teneré 660">Teneré 660</a>
-            <a href="/">Todas</a>
+                </div>
+                <div class="filpaginas">
 
-            <br>
-            <br>
-            <input type="range" name="" id="slider" min="10" max="20">
-            <input type="range" name="" id="sliderMax" min="10" max="20">
-            <button>Buscar</button>
+                </div>
+            </div>
 
             <footer class="mini">
                 <div class="cont-social">
@@ -84,29 +109,32 @@
                     </a>
                 </div>
             </footer>
-
         </div>
+
+        <!--Parte Derecha de la pantalla-->
         <div class="libros">
-            {{#each libros}}
-            <div style="flex: 1 1 40%
-             background: #000;">
-                <a href="/producto/{{nombre}}">
-                    <div style="width:100%;
+            <div class="mostrar">
+                {{#each libros}}
+                <div style="width:20%;
+             background: #EF6F7F;
+             margin: 0 10px">
+                    <a href="/producto/{{nombre}}">
+                        <div style="width:100%;
                                 height:200px;
                                 background-image: url({{libro}});
                                 background-size: contain;
                                 background-repeat: no-repeat;"></div>
-                    <p>
-                        <b>{{nombre}}</b>
-                    </p>
-                    <p>{{paginas}}</p>
-                    <p>{{idioma}}</p>
-                    <p>{{calificacion}}</p>
-                </a>
+                        <p>
+                            <b>{{nombre}}</b>
+                        </p>
+                        <p>{{paginas}}</p>
+                        <p>{{idioma}}</p>
+                        <p>{{calificacion}}</p>
+                    </a>
+                </div>
+                {{/each}}
             </div>
-            {{/each}}
         </div>
-
     </section>
 
     <script src="js/jquery-3.3.1.js"></script>
@@ -116,52 +144,8 @@
     <!--JS de SweetAlert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <script>
-        console.log('hola cliente');
-        var slider = document.querySelector('#slider');
-        var sliderMax = document.querySelector('#sliderMax');
-        document.querySelector('button').addEventListener('click', function (e) {
-            e.preventDefault();
-            location.href = '/?min=' + slider.value + '&max=' + sliderMax.value;
-        })
-
-        $(function () {
-            var header = document.getElementById('header');
-            var headroom = new Headroom(header);
-            headroom.init();
-
-            //Menu Responsive
-            //Calculamos ancho de pagina
-            var ancho = $(window).width(),
-                enlaces = $('#enlaces'),
-                btnMenu = $('#btn-menu'),
-                icono = $('#btn-menu .icono');
-
-            if (ancho < 700) {
-                enlaces.hide();
-                icono.addClass('fa-bars');
-
-            }
-
-            btnMenu.on('click', function (e) {
-                enlaces.slideToggle();
-                icono.toggleClass('fa-bars');
-                icono.toggleClass('fa-times');
-            });
-
-            $(window).on('resize', function () {
-                if ($(this).width() > 700) {
-                    enlaces.show();
-                    icono.addClass('fa-times');
-                    icono.removeClass('fa-bars');
-                } else {
-                    enlaces.hide();
-                    icono.addClass('fa-bars');
-                    icono.removeClass('fa-times');
-                }
-            });
-        });
-    </script>
+    <script src="js/cliente.js"></script>
+    <script src="js/recommended.js"></script>
 </body>
 
 </html>
