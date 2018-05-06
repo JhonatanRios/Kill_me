@@ -26,15 +26,21 @@ MongoClient.connect('mongodb://localhost:27017', function (err, client) {
 
 /*Esta parte es para cargar las paginas*/
 app.get('/', (req, res) => {
-    res.render('home', {});
+    res.render('home', {
+        tittle: "Home"
+    });
 })
 
 app.get('/how', (req, res) => {
-    res.render('how', {});
+    res.render('how', {
+        tittle: "How I Am"
+    });
 })
 
 app.get('/book', (req, res) => {
-    res.render('books', {});
+    res.render('books', {
+        tittle: "Books"
+    });
 })
 
 app.get('/reco', (req, res) => {
@@ -60,11 +66,15 @@ app.get('/reco', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-    res.render('contact', {});
+    res.render('contact', {
+        tittle: "Contact Me"
+    });
 })
 
 app.get('/checkout', (req, res) => {
-    res.render('checkout');
+    res.render('checkout', {
+        tittle: "Checkout"
+    });
 });
 
 

@@ -6,7 +6,6 @@ $red: #ff0000;
 $rose: #EF6F7F;
 $model: #fcf4e8;
 $blue: #3e8edd;
-
 .filtro {
     width: 20%;
     height: 100vh;
@@ -14,7 +13,7 @@ $blue: #3e8edd;
     position: fixed;
     float: left;
     top: 0;
-    .filbotones{
+    .filbotones {
         padding-top: 40px;
     }
     .mini {
@@ -37,6 +36,18 @@ $blue: #3e8edd;
     .mostrar {
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         padding: 20px;
+        .libro {
+            width: 20%;
+            background: #EF6F7F;
+            margin: 20px;
+            .imagen {
+                width: 100%;
+                height: 200px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
     }
 }
