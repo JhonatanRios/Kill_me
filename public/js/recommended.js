@@ -46,7 +46,7 @@ document.querySelector('.minMax').addEventListener('click', function(e){
 
 
 // carrito
-document.querySelectorAll('.agregar').forEach(function(button) {
+document.querySelectorAll('.add').forEach(function(button) {
     button.addEventListener('click', function(){
         var id = button.parentElement.getAttribute('data-id');
 

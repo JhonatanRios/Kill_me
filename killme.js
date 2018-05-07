@@ -47,16 +47,25 @@ app.get('/reco', (req, res) => {
     var prod = db.collection('libros')
         .find();
 
+    if (req.query.tematica)
+        prod.filter({
+            tematica: req.query.tematica
+        });
+
+    if (req.query.idioma)
+        prod.filter({
+            idioma: req.query.idioma
+        });
+
     if (req.query.editorial)
         prod.filter({
             editorial: req.query.editorial
         });
 
-    if (req.query.modelo)
+    if (req.query.calificacion)
         prod.filter({
-            modelo: req.query.modelo
+            calificacion: parseInt(req.query.calificacion)
         });
-
     prod.toArray((err, result) => {
         res.render('recommended', {
             libros: result,
@@ -80,7 +89,7 @@ app.get('/checkout', (req, res) => {
 
 app.get('/reco/:id', (req, res) => {
     db.collection('libros').find({
-        modelo: req.params.id
+        nombre: req.params.id
     }).toArray((err, result) => res.send(result))
 });
 
