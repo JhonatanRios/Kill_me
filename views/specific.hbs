@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{tittle}}</title>
+
+    <!--Links para el Slide-->
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/css/component.css" />
+
+    <!--Links para los efectos del Hover-->
+    <link rel="stylesheet" href="/css/hover.css">
+
+    <!--Links para los iconos-->
+    <link rel="stylesheet" href="/css/fontawesome-all.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reco.css">
+    <link rel="stylesheet" href="/css/reset.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="menu">
+            <div class="logo">
+                <img src="img/logo01.png" alt="">
+                <a href="#" class="btn-menu" id="btn-menu">
+                    <i class="icono fa fa-bars" aria-hidden="true">
+                    </i>
+                </a>
+            </div>
+
+            <div class="enlaces" id="enlaces">
+                <a class="home hvr-underline-from-left" href="/">Home</a>
+                <a class="how hvr-underline-from-left" href="/how">How I Am</a>
+                <a class="book hvr-underline-from-left" href="/book">Books</a>
+                <a class="contact hvr-underline-from-left" href="/reco">Recommended</a>
+                <a class="contact hvr-underline-from-left" href="/contact">Contact Me</a>
+                <a class="tienda hvr-underline-from-left" href="/checkout">
+                    <img src="img/shopping-cart.png" width="26px" alt="" class="shopping-cart">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="cuerpo">
+        <!--Parte Derecha de la pantalla-->
+        <div class="libros">
+            <div class="mostrar">
+                <div class="libro" data-id="{{this._id}}">
+                    <div class="imagen" style="background-image: url({{libro.libro}});"></div>
+                    <div class="descri">
+                        <p class="nom">
+                            <b>{{libro.nombre}}</b>
+                        </p>
+                        <p class="desc">
+                            Pages: {{libro.paginas}}
+                        </p>
+                        <p class="desc">
+                            Language: {{libro.idioma}}
+                        </p>
+                        <p class="desc">
+                            ${{libro.precio}}
+                        </p>
+                        <p class="desc">
+                            Start: {{libro.calificacion}}
+                        </p>
+                    </div>
+                    <div class="boton" align="center">
+                        <a href="/reco/producto/{{libro.nombre}}">
+                            <button class="more">Learn More...</button>
+                        </a>
+                        <button class="agregar">Add To Card</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mini">
+        <div class="cont-social">
+            <a href="#">
+                <i id="social-fb" class="fab fa-facebook-f social"></i>
+            </a>
+            <a href="#">
+                <i id="social-tw" class="fab fa-twitter social"></i>
+            </a>
+            <a href="#">
+                <i id="social-gp" class="fab fa-google-plus-g social"></i>
+            </a>
+            <a href="#">
+                <i id="social-em" class="fas fa-envelope social"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <!--JS de Menu-->
+    <script src="js/headroom.js"></script>
+
+    <!--JS de SweetAlert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="js/cliente.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/recommended.js"></script>
+</body>
+
+</html>
