@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/css/fontawesome-all.css">
 
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/reco.css">
+    <link rel="stylesheet" href="/css/spec.css">
     <link rel="stylesheet" href="/css/reset.css">
 </head>
 
@@ -28,7 +28,7 @@
     <header id="header">
         <nav class="menu">
             <div class="logo">
-                <img src="img/logo01.png" alt="">
+                <img src="/img/logo01.png" alt="">
                 <a href="#" class="btn-menu" id="btn-menu">
                     <i class="icono fa fa-bars" aria-hidden="true">
                     </i>
@@ -42,21 +42,33 @@
                 <a class="contact hvr-underline-from-left" href="/reco">Recommended</a>
                 <a class="contact hvr-underline-from-left" href="/contact">Contact Me</a>
                 <a class="tienda hvr-underline-from-left" href="/checkout">
-                    <img src="img/shopping-cart.png" width="26px" alt="" class="shopping-cart">
+                    <img src="/img/shopping-cart.png" width="26px" alt="" class="shopping-cart">
                 </a>
             </div>
         </nav>
     </header>
 
     <section class="cuerpo">
-        <!--Parte Derecha de la pantalla-->
-        <div class="libros">
+        <!--Parte Mostrar información detallada de los libros-->
+        <div class="spec">
             <div class="mostrar">
                 <div class="libro" data-id="{{this._id}}">
-                    <div class="imagen" style="background-image: url({{libro.libro}});"></div>
+                    <div class="imagen" style="background-image: url(/{{libro.libro}});"></div>
                     <div class="descri">
                         <p class="nom">
                             <b>{{libro.nombre}}</b>
+                        </p>
+                        <p class="desc">
+                            {{libro.descrip}}
+                        </p>
+                        <p class="desc">
+                            Author: {{libro.autor}}
+                        </p>
+                        <p class="desc">
+                            Editorial: {{libro.editorial}}
+                        </p>
+                        <p class="desc">
+                            Thematic: {{libro.tematica}}
                         </p>
                         <p class="desc">
                             Pages: {{libro.paginas}}
@@ -65,24 +77,24 @@
                             Language: {{libro.idioma}}
                         </p>
                         <p class="desc">
-                            ${{libro.precio}}
+                            Year: {{libro.ano}}
+                        </p>
+                        <p class="desc">
+                            Price: ${{libro.precio}}
                         </p>
                         <p class="desc">
                             Start: {{libro.calificacion}}
                         </p>
                     </div>
                     <div class="boton" align="center">
-                        <a href="/reco/producto/{{libro.nombre}}">
-                            <button class="more">Learn More...</button>
-                        </a>
+                        <a href="/reco"><button class="atras">Back?</button></a>
                         <button class="agregar">Add To Card</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <footer class="mini">
+    <footer class="footerspec">
         <div class="cont-social">
             <a href="#">
                 <i id="social-fb" class="fab fa-facebook-f social"></i>
@@ -99,16 +111,16 @@
         </div>
     </footer>
 
-    <script src="js/jquery-3.3.1.js"></script>
+    <script src="/js/jquery-3.3.1.js"></script>
     <!--JS de Menu-->
-    <script src="js/headroom.js"></script>
+    <script src="/js/headroom.js"></script>
 
     <!--JS de SweetAlert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <script src="js/cliente.js"></script>
-    <script src="js/productos.js"></script>
-    <script src="js/recommended.js"></script>
+    <script src="/js/cliente.js"></script>
+    <script src="/js/productos.js"></script>
+    <script src="/js/recommended.js"></script>
 </body>
 
 </html>
