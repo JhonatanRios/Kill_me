@@ -34,7 +34,6 @@
                     </i>
                 </a>
             </div>
-
             <div class="enlaces" id="enlaces">
                 <a class="home hvr-underline-from-left" href="/">Home</a>
                 <a class="how hvr-underline-from-left" href="/how">How I Am</a>
@@ -50,44 +49,50 @@
 
     <section class="cuerpo">
         <!--Parte Izquierda de la pantalla-->
+        <!--Filtros-->
         <div class="filtro">
             <div class="filbotones">
                 <div class="filtema">
                     <h2>Thematic...</h2>
-                    <a href="/reco?tematica=Drama">Drama</a>
-                    <a href="/reco?tematica=Fantasia">Fantasia</a>
-                    <a href="/reco?tematica=Narrativa">Narrativa</a>
-                    <a href="/reco?tematica=Autobiografía">Autobiografía</a>
-                    <a href="/reco">Todas</a>
+                    <a class="hvr-underline-from-left" href="/reco?tematica=Drama">Drama</a>
+                    <a class="hvr-underline-from-left" href="/reco?tematica=Fantasia">Fantasia</a>
+                    <a class="hvr-underline-from-left" href="/reco?tematica=Narrativa">Narrativa</a>
+                    <a class="hvr-underline-from-left" href="/reco?tematica=Autobiografía">Autobiografía</a>
+                    <a class="hvr-underline-from-left" href="/reco">Todas</a>
                 </div>
                 <div class="filidio">
                     <h2>Language...</h2>
-                    <a href="/reco?idioma=English">English</a>
-                    <a href="/reco?idioma=French">French</a>
-                    <a href="/reco?idioma=Spanish">Spanish</a>
-                    <a href="/reco?idioma=All">All</a>
-                    <a href="/reco">Todas</a>
+                    <a class="hvr-underline-from-left" href="/reco?idioma=English">English</a>
+                    <a class="hvr-underline-from-left" href="/reco?idioma=French">French</a>
+                    <a class="hvr-underline-from-left" href="/reco?idioma=Spanish">Spanish</a>
+                    <a class="hvr-underline-from-left" href="/reco?idioma=All">All</a>
+                    <a class="hvr-underline-from-left" href="/reco">Todas</a>
                 </div>
                 <div class="filedito">
                     <h2>Editorial...</h2>
-                    <a href="/reco?editorial=Salamandra">Salamandra</a>
-                    <a href="/reco?editorial=Planeta">Planeta</a>
-                    <a href="/reco">Todas</a>
+                    <a class="hvr-underline-from-left" href="/reco?editorial=Salamandra">Salamandra</a>
+                    <a class="hvr-underline-from-left" href="/reco?editorial=Planeta">Planeta</a>
+                    <a class="hvr-underline-from-left" href="/reco">Todas</a>
                 </div>
                 <div class="filcali">
                     <h2>Score...</h2>
-                    <a href="/reco?calificacion=5">5</a>
-                    <a href="/reco?calificacion=4">4</a>
-                    <a href="/reco?calificacion=3">3</a>
-                    <a href="/reco?calificacion=2">2</a>
-                    <a href="/reco?calificacion=1">1</a>
-                    <a href="/reco">Todas</a>
+                    <a class="hvr-underline-from-left" href="/reco?calificacion=5">5</a>
+                    <a class="hvr-underline-from-left" href="/reco?calificacion=4">4</a>
+                    <a class="hvr-underline-from-left" href="/reco?calificacion=3">3</a>
+                    <a class="hvr-underline-from-left" href="/reco?calificacion=2">2</a>
+                    <a class="hvr-underline-from-left" href="/reco?calificacion=1">1</a>
+                    <a class="hvr-underline-from-left" href="/reco">Todas</a>
                 </div>
             </div>
             <div class="filbarras">
                 <div class="filprecio">
-                    <input type="range" name="" id="slider" min="10" max="20">
-                    <input type="range" name="" id="sliderMax" min="10" max="20">
+                    <h2>Price...</h2>
+                    <p>$0</p>
+                    <input type="range" name="" id="slider" min="0" max="49">
+                    <p>$50</p>
+                    <div class="numer">
+                        <span id="demo"></span>
+                    </div>
                     <button class="minMax">Buscar</button>
                 </div>
                 <div class="filano">
@@ -101,7 +106,7 @@
             <h2>Carrito:
                 <span class="carrito">0</span>
             </h2>
-
+            <!--Footer-->
             <footer class="mini">
                 <div class="cont-social">
                     <a href="#">
@@ -124,42 +129,44 @@
         <div class="libros">
             <div class="mostrar">
                 {{#each libros}}
-                <div class="libro" data-id="{{this._id}}">
-                        <div class="imagen" style="background-image: url({{libro}});"></div>
-                        <div class="descri">
-                            <p class="nom">
-                                <b>{{nombre}}</b>
-                            </p>
-                            <p class="desc">
-                                Pages: {{paginas}}
-                            </p>
-                            <p class="desc">
-                                Language: {{idioma}}
-                            </p>
-                            <p class="desc">
-                                Price: ${{precio}}
-                            </p>
-                            <p class="desc">
-                                Start: {{calificacion}}
-                            </p>
-                        </div>
-                        <div class="boton" align="center">
-                            <a href="/reco/specific/{{nombre}}"><button class="more">Learn More...</button></a>
-                            <button class="agregar">Add To Card</button>
-                        </div>
+                <!--Parte mostrar cada tarjeta individual-->
+                <div class="libro hvr-glow" data-id="{{this._id}}">
+                    <div class="imagen" style="background-image: url({{libro}});"></div>
+                    <div class="descri">
+                        <p class="nom">
+                            <b>{{nombre}}</b>
+                        </p>
+                        <p class="desc">
+                            Pages: {{paginas}}
+                        </p>
+                        <p class="desc">
+                            Language: {{idioma}}
+                        </p>
+                        <p class="desc">
+                            Price: ${{precio}}
+                        </p>
+                        <p class="desc">
+                            Start: {{calificacion}}
+                        </p>
+                    </div>
+                    <div class="boton" align="center">
+                        <a href="/reco/specific/{{nombre}}">
+                            <button class="more">Learn More...</button>
+                        </a>
+                        <button class="agregar">Add To Card</button>
+                    </div>
                 </div>
                 {{/each}}
             </div>
         </div>
     </section>
-
     <script src="js/jquery-3.3.1.js"></script>
     <!--JS de Menu-->
     <script src="js/headroom.js"></script>
 
     <!--JS de SweetAlert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <!--Js del taller-->
     <script src="js/cliente.js"></script>
     <script src="js/productos.js"></script>
     <script src="js/recommended.js"></script>

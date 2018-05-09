@@ -6,8 +6,9 @@ $red: #ff0000;
 $rose: #EF6F7F;
 $model: #fcf4e8;
 $blue: #3e8edd;
-$gray: #cecece;
-$graydark: #4f4f4f;
+$gray: #ebe9e9;
+$graydark: #cecece;
+$graytext: #4b5f5a;
 * {
     font-family: "Nunito", sans-serif;
 }
@@ -22,18 +23,18 @@ a {
 }
 
 body {
-    background: $white;
+    background: $gray;
 }
 
 .filtro {
     width: 20%;
     height: 100vh;
-    background: $gray;
+    background: $graydark;
     position: fixed;
     float: left;
     top: 0;
     .filbotones {
-        padding: 4em 1em;
+        padding: 4em 1em 0 1em;
     }
     .mini {
         position: absolute;
@@ -43,6 +44,113 @@ body {
         padding: 0.4em;
         .cont-social a {
             margin: 0 7%;
+        }
+    }
+    .filbotones {
+        .filtema {
+            h2 {
+                color: $rose;
+                font-size: 1.5em;
+                padding: 5% 0 2% 0;
+                width: 100%;
+                text-align: center;
+                font-family: "Nunito", sans-serif;
+            }
+            a {
+                color: $graytext;
+                font-size: 1em;
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+                padding: 2% 0 2% 5%;
+                font-family: "Nunito", sans-serif;
+            }
+        }
+        .filidio {
+            h2 {
+                color: $rose;
+                font-size: 1.5em;
+                padding: 5% 0 2% 0;
+                width: 100%;
+                text-align: center;
+                font-family: "Nunito", sans-serif;
+            }
+            a {
+                color: $graytext;
+                font-size: 1em;
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+                padding: 2% 0 2% 5%;
+                font-family: "Nunito", sans-serif;
+            }
+        }
+        .filedito {
+            h2 {
+                color: $rose;
+                font-size: 1.5em;
+                padding: 5% 0 2% 0;
+                width: 100%;
+                text-align: center;
+                font-family: "Nunito", sans-serif;
+            }
+            a {
+                color: $graytext;
+                font-size: 1em;
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+                padding: 2% 0 2% 5%;
+                font-family: "Nunito", sans-serif;
+            }
+        }
+        .filcali {
+            h2 {
+                color: $rose;
+                font-size: 1.5em;
+                padding: 5% 0 5% 0;
+                width: 100%;
+                text-align: center;
+                font-family: "Nunito", sans-serif;
+            }
+            a {
+                color: $graytext;
+                font-size: 1em;
+                padding: 5% 0 2% 5%;
+                font-family: "Nunito", sans-serif;
+            }
+        }
+    }
+    .filbarras {
+        width: 100%;
+        .filprecio {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: stretch;
+            align-items: center;
+            h2 {
+                color: $rose;
+                font-size: 1.5em;
+                padding: 5% 0 5% 0;
+                width: 100%;
+                text-align: center;
+                font-family: "Nunito", sans-serif;
+            }
+            .numer{
+                width: 100%;
+                text-align: center;
+                #demo {
+                    text-align: center;
+                    font-family: "Nunito", sans-serif;
+                    font-size: 18px;
+                    color: $blue;
+                }
+            }
+            .minMax {
+                width: 80%;
+            }
         }
     }
 }
@@ -61,8 +169,7 @@ body {
             width: 20%;
             background: $white;
             margin: 20px;
-            border-radius: 6px;
-            box-shadow: 0px 0px 20px 0px rgba(20, 20, 20, 0.25);
+            border-radius: 6px; //box-shadow: 0px 0px 20px 0px rgba(20, 20, 20, 0.25);
             .imagen {
                 width: 100%;
                 height: 15em;

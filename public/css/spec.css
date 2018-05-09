@@ -51,6 +51,29 @@ body {
   margin-bottom: 0.4em;
 }
 
+.spec .mostrar .libro .descri .desc {
+  font-size: 20px;
+  margin-bottom: 0.4em;
+}
+
+.spec .mostrar .libro .descri .datos {
+  font-size: 16px;
+  margin-bottom: 0.4em;
+}
+
+.spec .mostrar .libro .container {
+  display: flex;
+}
+
+.spec .mostrar .libro .container .text {
+  width: 70%;
+}
+
+.spec .mostrar .libro .container .dat {
+  width: 30%;
+  padding: 0 0 0 2em;
+}
+
 .spec .mostrar .libro .boton .agregar {
   margin: .5em 0;
   border: none;

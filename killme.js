@@ -66,9 +66,17 @@ app.get('/reco', (req, res) => {
         prod.filter({
             calificacion: parseInt(req.query.calificacion)
         });
+
+    if (req.query.min)
+        prod.filter({
+            precio: {
+                $gte: parseInt(req.query.min)
+            }
+        });
+
     prod.toArray((err, result) => {
         res.render('recommended', {
-            
+
             libros: result,
             tittle: "Recommended"
         });
@@ -89,24 +97,28 @@ app.get('/checkout', (req, res) => {
 
 
 app.get('/reco/specific/:nombre', (req, res) => {
-    db.collection('libros').find({ 
-        nombre: req.params.nombre 
+    db.collection('libros').find({
+        nombre: req.params.nombre
     }).toArray((err, result) => res.render('specific', {
         libro: result[0],
         tittle: "Specific"
     }))
-    
+
 });
 
 
 app.get('/productosPorIds', (req, res) => {
     console.log(req.query.ids);
     var arreglo = req.query.ids.split(',');
-    arreglo = arreglo.map(function(id) {
+    arreglo = arreglo.map(function (id) {
         return new ObjectID(id);
     });
     var prod = db.collection('libros')
-        .find({ _id: { $in: arreglo } })
+        .find({
+            _id: {
+                $in: arreglo
+            }
+        })
         .toArray((err, result) => {
             res.send(result);
         });

@@ -58,36 +58,44 @@
                         <p class="nom">
                             <b>{{libro.nombre}}</b>
                         </p>
-                        <p class="desc">
-                            {{libro.descrip}}
-                        </p>
-                        <p class="desc">
-                            Author: {{libro.autor}}
-                        </p>
-                        <p class="desc">
-                            Editorial: {{libro.editorial}}
-                        </p>
-                        <p class="desc">
-                            Thematic: {{libro.tematica}}
-                        </p>
-                        <p class="desc">
-                            Pages: {{libro.paginas}}
-                        </p>
-                        <p class="desc">
-                            Language: {{libro.idioma}}
-                        </p>
-                        <p class="desc">
-                            Year: {{libro.ano}}
-                        </p>
-                        <p class="desc">
-                            Price: ${{libro.precio}}
-                        </p>
-                        <p class="desc">
-                            Start: {{libro.calificacion}}
-                        </p>
+                        <div class="container">
+                            <div class="text">
+                                <p class="desc">
+                                    {{libro.descrip}}
+                                </p>
+                            </div>
+                            <div class="dat">
+                                <p class="datos">
+                                    Author: {{libro.autor}}
+                                </p>
+                                <p class="datos">
+                                    Editorial: {{libro.editorial}}
+                                </p>
+                                <p class="datos">
+                                    Thematic: {{libro.tematica}}
+                                </p>
+                                <p class="datos">
+                                    Pages: {{libro.paginas}}
+                                </p>
+                                <p class="datos">
+                                    Language: {{libro.idioma}}
+                                </p>
+                                <p class="datos">
+                                    Year: {{libro.ano}}
+                                </p>
+                                <p class="datos">
+                                    Price: ${{libro.precio}}
+                                </p>
+                                <p class="datos">
+                                    Start: {{libro.calificacion}}
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="boton" align="center">
-                        <a href="/reco"><button class="atras">Back?</button></a>
+                        <a href="/reco">
+                            <button class="atras">Back?</button>
+                        </a>
                         <button class="agregar">Add To Card</button>
                     </div>
                 </div>
