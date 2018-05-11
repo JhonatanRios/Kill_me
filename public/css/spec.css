@@ -43,7 +43,7 @@ body {
 
 .spec .mostrar .libro .descri {
   width: 100%;
-  padding: 5% 5% 0 5%;
+  padding: 5% 5% 2% 5%;
 }
 
 .spec .mostrar .libro .descri .nom {
@@ -54,6 +54,7 @@ body {
 .spec .mostrar .libro .descri .desc {
   font-size: 20px;
   margin-bottom: 0.4em;
+  padding: 0 4em 0 0;
 }
 
 .spec .mostrar .libro .descri .datos {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Checkout</title>
+    <title>{{tittle}}</title>
 
     <!--Links para los efectos del Hover-->
     <link rel="stylesheet" href="css/hover.css">
@@ -41,6 +41,37 @@
             </div>
         </nav>
     </header>
+
+    <section class="cuerpo">
+        <!--Parte Mostrar información detallada de los libros-->
+        <div class="spec">
+            <div class="mostrar">
+                <div class="libro" data-id="{{this._id}}">
+                    <div class="imagen" style="background-image: url(/{{compra.libro}});"></div>
+                    <div class="descri">
+                        <p class="nom">
+                            <b>{{compra.nombre}}</b>
+                        </p>
+                        <div class="container">
+                            <div class="text">
+                                <p class="desc">
+                                    {{compra.descrip}}
+                                </p>
+                            </div>
+                            <div class="dat">
+                                <p class="datos">
+                                    Author: {{compra.autor}}
+                                </p>
+                                <p class="datos">
+                                    Editorial: {{compra.editorial}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <h1>Checkout</h1>
     <h2>Carrito:

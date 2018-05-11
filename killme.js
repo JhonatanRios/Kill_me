@@ -108,17 +108,12 @@ app.get('/reco/specific/:nombre', (req, res) => {
 
 
 app.get('/productosPorIds', (req, res) => {
-    console.log(req.query.ids);
-    var arreglo = req.query.ids.split(',');
-    arreglo = arreglo.map(function (id) {
+    var arreglo = req.query.id.split(',');
+    arreglo = arreglo.map(function(id) {
         return new ObjectID(id);
     });
     var prod = db.collection('libros')
-        .find({
-            _id: {
-                $in: arreglo
-            }
-        })
+        .find({ _id: { $in: arreglo } })
         .toArray((err, result) => {
             res.send(result);
         });

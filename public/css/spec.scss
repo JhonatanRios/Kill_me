@@ -45,7 +45,8 @@ body {
             }
             .descri {
                 width: 100%;
-                padding: 5% 5% 0 5%;
+                padding: 5% 5% 2% 5%;
+
                 .nom {
                     font-size: 50px;
                     margin-bottom: 0.4em;
@@ -53,6 +54,7 @@ body {
                 .desc {
                     font-size: 20px;
                     margin-bottom: 0.4em;
+                    padding: 0 4em 0 0;
                 }
                 .datos {
                     font-size: 16px;
