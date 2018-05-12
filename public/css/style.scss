@@ -92,7 +92,27 @@ header .menu .logo img {
 
 .enlaces .tienda{
     padding: 0.7em;
+    width: 3em;
+    height: 1.6em; 
 }
+
+span.rose {
+    background: $rose;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.9em;
+    line-height: 1.3em;
+    margin-right: 15px;
+    text-align: center;
+    width: 1.3em;
+    position: relative;
+    top: -33px;
+    left: 22px;
+  }
 
 .hvr-underline-from-left {
     display: inline-block;

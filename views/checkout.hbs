@@ -36,7 +36,10 @@
                 <a class="contact hvr-underline-from-left" href="/reco">Recommended</a>
                 <a class="contact hvr-underline-from-left" href="/contact">Contact Me</a>
                 <a class="tienda hvr-underline-from-left" href="/checkout">
-                    <img src="img/shopping-cart.png" width="26px" alt="" class="shopping-cart">
+                    <div>
+                        <img src="img/shopping-cart.png" width="26px" alt="" class="shopping-cart">
+                        <span class="carrito rose">0</span>
+                    </div>
                 </a>
             </div>
         </nav>
@@ -46,24 +49,24 @@
         <!--Parte Mostrar información detallada de los libros-->
         <div class="spec">
             <div class="mostrar">
-                <div class="libro" data-id="{{this._id}}">
-                    <div class="imagen" style="background-image: url(/{{compra.libro}});"></div>
+                <div class="libro">
+                    <div class="imagen"></div>
                     <div class="descri">
                         <p class="nom">
-                            <b>{{compra.nombre}}</b>
+                            <b></b>
                         </p>
                         <div class="container">
                             <div class="text">
                                 <p class="desc">
-                                    {{compra.descrip}}
+
                                 </p>
                             </div>
                             <div class="dat">
                                 <p class="datos">
-                                    Author: {{compra.autor}}
+
                                 </p>
                                 <p class="datos">
-                                    Editorial: {{compra.editorial}}
+
                                 </p>
                             </div>
                         </div>
@@ -72,11 +75,6 @@
             </div>
         </div>
     </section>
-
-    <h1>Checkout</h1>
-    <h2>Carrito:
-        <span class="carrito">0</span>
-    </h2>
     <ul class="lista"></ul>
 
     <script src="js/cliente.js"></script>
