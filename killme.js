@@ -95,7 +95,6 @@ app.get('/checkout', (req, res) => {
     });
 });
 
-
 app.get('/reco/specific/:nombre', (req, res) => {
     db.collection('libros').find({
         nombre: req.params.nombre
@@ -105,7 +104,6 @@ app.get('/reco/specific/:nombre', (req, res) => {
     }))
 
 });
-
 
 app.get('/productosPorIds', (req, res) => {
     var arreglo = req.query.id.split(',');

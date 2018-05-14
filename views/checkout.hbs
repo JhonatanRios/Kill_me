@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/fontawesome-all.css">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reco.css">
+    <link rel="stylesheet" href="css/carrito.css">
     <link rel="stylesheet" href="css/reset.css">
 </head>
 
@@ -28,7 +28,6 @@
                     </i>
                 </a>
             </div>
-
             <div class="enlaces" id="enlaces">
                 <a class="home hvr-underline-from-left" href="/">Home</a>
                 <a class="how hvr-underline-from-left" href="/how">How I Am</a>
@@ -46,39 +45,70 @@
     </header>
 
     <section class="cuerpo">
-        <!--Parte Mostrar información detallada de los libros-->
-        <div class="spec">
-            <div class="mostrar">
-                <div class="libro">
-                    <div class="imagen"></div>
-                    <div class="descri">
-                        <p class="nom">
-                            <b></b>
-                        </p>
-                        <div class="container">
-                            <div class="text">
-                                <p class="desc">
 
-                                </p>
-                            </div>
-                            <div class="dat">
-                                <p class="datos">
-
-                                </p>
-                                <p class="datos">
-
-                                </p>
-                            </div>
-                        </div>
+        <div class="formulario">
+            <div class="cont-form">
+                <h1 class="tit-form">
+                    Personal Information
+                </h1>
+                <div class="name-form">
+                    <div class="firstName">
+                        <h3 class="firstNameTitle">
+                            First Name
+                        </h3>
+                        <input type="text" name="first-name" id="cuadro">
+                    </div>
+                    <div class="lastName">
+                        <h3 class="lastNameTitle">
+                            Last Name
+                        </h3>
+                        <input type="text" name="last-name" id="">
+                    </div>
+                </div>
+                <div class="email-form">
+                    <div class="email">
+                        <h3 class="emailAddressTitle">
+                            E-mail Address
+                        </h3>
+                        <input type="text" name="email-address" id="">
+                    </div>
+                </div>
+                <div class="country-cont-form">
+                    <div class="country-cont">
+                        <h3 class="country">
+                            Country
+                        </h3>
+                        <input type="text" name="country" id="">
+                    </div>
+                    <div class="city-cont">
+                        <h3 class="city">
+                            City
+                        </h3>
+                        <input type="text" name="city" id="">
                     </div>
                 </div>
             </div>
+            <div class="total-cont">
+                <div class="total-subcont">
+                    <p class="total-tit">TOTAL:</p>
+                    <p class="total-var">$ Sumelo Usted</p>
+                </div>
+                <div class="pagar-cont">
+                    <button class="pagar" id="paga">PAGAR</button>
+                </div>
+            </div>
         </div>
-    </section>
-    <ul class="lista"></ul>
+        <!--Parte Mostrar los libros que va ha comprar-->
+        <div class="carrito">
+            <ul class="lista"></ul>
+        </div>
 
+    </section>
+    
     <script src="js/cliente.js"></script>
     <script src="js/checkout.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

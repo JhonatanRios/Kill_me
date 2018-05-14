@@ -9,3 +9,263 @@ $blue: #3e8edd;
 $gray: #ebe9e9;
 $graydark: #cecece;
 $graytext: #4b5f5a;
+.enlaces .tienda {
+    padding: 0.7em;
+    width: 3em;
+    height: 1.6em;
+}
+
+body {
+    background: $gray;
+}
+
+.cuerpo {
+    font-family: nunito;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    .formulario {
+        width: 43em;
+        height: 100vh;
+        position: fixed;
+        background: $white;
+        padding-top: 8%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-items: center;
+        align-content: flex-start;
+        .cont-form {
+            width: 60%;
+            .tit-form {
+                font-size: 2em;
+                text-align: center;
+                padding: 1em 0;
+            }
+            .name-form {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                justify-items: center;
+                align-content: center;
+                .firstName {
+                    width: 48%;
+                    .firstNameTitle {
+                        font-size: 1em;
+                        padding: 1em 0 0.5em 0;
+                    }
+                    input {
+                        width: 100%;
+                    }
+                }
+                .lastName {
+                    width: 48%;
+                    .lastNameTitle {
+                        font-size: 1em;
+                        padding: 1em 0 0.5em 0;
+                    }
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+            .email-form {
+                width: 100%;
+                .email {
+                    width: 100%;
+                    .emailAddressTitle {
+                        font-size: 1em;
+                        padding: 1em 0 0.5em 0;
+                    }
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+            .country-cont-form {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                justify-items: center;
+                align-content: center;
+                .country-cont {
+                    width: 48%;
+                    .country {
+                        font-size: 1em;
+                        padding: 1em 0 0.5em 0;
+                    }
+                    input {
+                        width: 100%;
+                    }
+                }
+                .city-cont {
+                    width: 48%;
+                    .city {
+                        font-size: 1em;
+                        padding: 1em 0 0.5em 0;
+                    }
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .total-cont {
+            width: 41em;
+            margin: 1em 0 0 0;
+            padding: 3em 1em;
+            display: flex;
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-items: center;
+            align-content: center;
+            background: $rose;
+            .total-subcont {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-left: 3em;
+                justify-content: space-between;
+                justify-items: center;
+                align-content: center;
+                width: 45%;
+                .total-tit {
+                    width: 50%;
+                    display: flex;
+                    font-size: 1.5em;
+                    color: $white;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    justify-items: center;
+                    align-content: center;
+                }
+                .total-var {
+                    width: 50%;
+                    font-size: 1.5em;
+                    color: $white;
+                    font-weight: 700;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    justify-items: center;
+                    align-content: center;
+                }
+            }
+            .pagar-cont {
+                width: 45%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                justify-items: center;
+                align-content: center;
+                .pagar {
+                    margin: .5em 0;
+                    border: none;
+                    background: $red;
+                    color: #f2f2f2;
+                    font-size: 18px;
+                    border-radius: 10px;
+                    position: relative;
+                    box-sizing: border-box;
+                    transition: all 500ms ease;
+                    padding: 0.6em 2.5em;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .carrito {
+        width: 100%;
+        margin-left: 50%;
+        padding-top: 4%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        .lista {
+            width: 100%;
+            .librito {
+                background: white;
+                margin-bottom: 0.5em;
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                justify-items: center;
+                align-content: center;
+                .contp {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    justify-items: center;
+                    align-content: center;
+                    width: 100%;
+                    height: 7em;
+                    .contimagenc {
+                        width: 20%;
+                        .imagenc {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .continfo {
+                        width: 75%;
+                        padding: 1em;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        justify-items: center;
+                        align-content: center;
+                        .nomble {
+                            height: 7em;
+                            display: flex;
+                            align-content: center;
+                            flex-direction: row;
+                            justify-items: center;
+                            justify-content: flex-start;
+                            padding: 2em 0;
+                        }
+                        .plecio {
+                            width: 20%;
+                            height: 7em;
+                            display: flex;
+                            align-content: center;
+                            flex-direction: row;
+                            justify-items: center;
+                            justify-content: flex-end;
+                            padding: 2em 0;
+                            span {
+                                font-weight: 700;
+                                color: $rose;
+                                padding-right: 0.5em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

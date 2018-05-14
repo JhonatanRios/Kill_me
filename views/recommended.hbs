@@ -150,10 +150,10 @@
                         </p>
                     </div>
                     <div class="boton" align="center">
-                        <a href="/reco/specific/{{nombre}}">
+                        <a href="/reco/specific/{{nombre}}" id="cuadro">
                             <button class="more">Learn More...</button>
                         </a>
-                        <button class="agregar">Add To Card</button>
+                        <button class="agregar" id="compra">Add To Card</button>
                     </div>
                 </div>
                 {{/each}}
@@ -167,9 +167,22 @@
     <!--JS de SweetAlert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--Js del taller-->
+    <script src="js/menu.js"></script>
     <script src="js/cliente.js"></script>
     <script src="js/productos.js"></script>
     <script src="js/recommended.js"></script>
+
+    <script>
+        //Uso del SweetAlert
+        document.getElementById('compra').addEventListener('click', tomarDatos);
+
+        function tomarDatos(e) {
+            e.preventDefault();
+
+            var mail = document.getElementById('cuadro').value;
+            swal("Thanks for Buying!", "Check your Name: " + mail, "success");
+        }
+    </script>
 </body>
 
 </html>

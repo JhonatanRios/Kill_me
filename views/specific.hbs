@@ -28,13 +28,12 @@
     <header id="header">
         <nav class="menu">
             <div class="logo">
-                <img src="/img/logo01.png" alt="">
+                <img src="img/logo01.png" alt="">
                 <a href="#" class="btn-menu" id="btn-menu">
                     <i class="icono fa fa-bars" aria-hidden="true">
                     </i>
                 </a>
             </div>
-
             <div class="enlaces" id="enlaces">
                 <a class="home hvr-underline-from-left" href="/">Home</a>
                 <a class="how hvr-underline-from-left" href="/how">How I Am</a>
@@ -42,7 +41,10 @@
                 <a class="contact hvr-underline-from-left" href="/reco">Recommended</a>
                 <a class="contact hvr-underline-from-left" href="/contact">Contact Me</a>
                 <a class="tienda hvr-underline-from-left" href="/checkout">
-                    <img src="/img/shopping-cart.png" width="26px" alt="" class="shopping-cart">
+                    <div>
+                        <img src="/img/shopping-cart.png" width="26px" alt="" class="shopping-cart">
+                        <span class="carrito rose">0</span>
+                    </div>
                 </a>
             </div>
         </nav>
@@ -126,8 +128,9 @@
     <!--JS de SweetAlert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <script src="/js/menu.js"></script>
     <script src="/js/cliente.js"></script>
     <script src="/js/productos.js"></script>
-    <script src="/js/recommended.js"></script>
 </body>
+
 </html>
