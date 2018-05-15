@@ -67,15 +67,13 @@
                     <h2>Language...</h2>
                     <a class="hvr-underline-from-left" href="/reco?idioma=English">English</a>
                     <a class="hvr-underline-from-left" href="/reco?idioma=French">French</a>
-                    <a class="hvr-underline-from-left" href="/reco?idioma=Spanish">Spanish</a>
+                    <a class="hvr-underline-from-left" href="/reco?idioma= Spanish">Spanish</a>
                     <a class="hvr-underline-from-left" href="/reco?idioma=All">All</a>
-                    <a class="hvr-underline-from-left" href="/reco">Todas</a>
                 </div>
                 <div class="filedito">
                     <h2>Editorial...</h2>
                     <a class="hvr-underline-from-left" href="/reco?editorial=Salamandra">Salamandra</a>
                     <a class="hvr-underline-from-left" href="/reco?editorial=Planeta">Planeta</a>
-                    <a class="hvr-underline-from-left" href="/reco">Todas</a>
                 </div>
                 <div class="filcali">
                     <h2>Score...</h2>
@@ -84,7 +82,6 @@
                     <a class="hvr-underline-from-left" href="/reco?calificacion=3">3</a>
                     <a class="hvr-underline-from-left" href="/reco?calificacion=2">2</a>
                     <a class="hvr-underline-from-left" href="/reco?calificacion=1">1</a>
-                    <a class="hvr-underline-from-left" href="/reco">Todas</a>
                 </div>
             </div>
             <div class="filbarras">
@@ -98,12 +95,12 @@
                     </div>
                     <button class="minMax">Buscar</button>
                 </div>
-                <div class="filano">
+            </div>
 
-                </div>
-                <div class="filpaginas">
-
-                </div>
+            <div class="eliminar">
+                <h2 class="hvr-underline-from-center">
+                    <a href="/reco">Eliminar Filtros</a>
+                </h2>
             </div>
 
             <!--Footer-->
@@ -134,16 +131,16 @@
                     <div class="imagen" style="background-image: url({{libro}});"></div>
                     <div class="descri">
                         <p class="nom">
-                            <b>{{nombre}}</b>
+                            <b>{{nombre}}.</b>
                         </p>
                         <p class="desc">
-                            Pages: {{paginas}}
+                            Pages: {{paginas}}.
                         </p>
                         <p class="desc">
-                            Language: {{idioma}}
+                            Language: {{idioma}}.
                         </p>
                         <p class="desc">
-                            Price: ${{precio}}
+                            Price: ${{precio}}.
                         </p>
                         <p class="desc">
                             Start: {{calificacion}}
@@ -180,7 +177,7 @@
             e.preventDefault();
 
             var mail = document.getElementById('cuadro').value;
-            swal("Thanks for Buying!", "Check your Name: " + mail, "success");
+            swal("Thanks for Buying!", "This product is added to the cart: " + mail, "success");
         }
     </script>
 </body>
