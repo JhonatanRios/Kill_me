@@ -19,6 +19,13 @@ document.getElementById('paga').addEventListener('click', tomarDatos);
 function tomarDatos(e) {
     e.preventDefault();
 
-    var mail = document.getElementById('cuadro').value;
-    swal("Thanks for Buying!", "Check your Name: " + mail, "success");
+    var nombre = document.getElementById('cuadro').value;
+    swal("Thanks for Buying!", "Check your Name: " + nombre, "success");
+}
+
+document.getElementById('eliminar').addEventListener('click', elimina);
+
+function elimina(e) {
+    e.preventDefault();
+    localStorage.clear(".arreglo");
 }
