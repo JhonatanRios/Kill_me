@@ -1,19 +1,30 @@
 {
-  "name": "taller2",
-  "version": "1.0.0",
-  "description": "Tienda de Melanie",
-  "main": "productos.js",
-  "scripts": {
-    "start": "./node_modules/.bin/nodemon killme.js",
-    "mongo": "C:/\"Program Files\"/MongoDB/Server/3.4/bin/mongod"
-  },
-  "author": "Jhonatan Rios",
-  "license": "ISC",
+  "name": "melanie_cockcroft",
+  "version": "2.0.0",
+  "description": "Pagina Web para Melanie Cockcroft",
+  "main": "killme.js",
   "dependencies": {
     "consolidate": "^0.15.1",
     "express": "^4.16.3",
     "handlebars": "^4.0.11",
+    "jquerypp": "^2.0.2",
+    "modernizr": "^3.6.0",
     "mongodb": "^3.0.7",
     "nodemon": "^1.17.3"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon killme.js",
+    "mongo": "C:/\"Program Files\"/MongoDB/Server/3.4/bin/mongod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonatanRios/Kill_me.git"
+  },
+  "author": "Jhonatan Rios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhonatanRios/Kill_me/issues"
+  },
+  "homepage": "https://github.com/JhonatanRios/Kill_me#readme"
 }

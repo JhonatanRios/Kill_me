@@ -76,7 +76,6 @@ app.get('/reco', (req, res) => {
 
     prod.toArray((err, result) => {
         res.render('recommended', {
-
             libros: result,
             tittle: "Recommended"
         });
