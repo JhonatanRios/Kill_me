@@ -80,3 +80,17 @@ var Page = (function () {
 })();
 
 Page.init();
+/*
+console.log(arregloc);
+
+fetch('http://localhost:1234/comentarios?id=' + arregloc)
+    .then(function (res) {
+        return res.json();
+    })
+    .then(function (res) {
+        console.log(res);
+        var lista = document.querySelector('.bb-bookblock');
+        res.forEach(function (elem) {
+            lista.innerHTML += '<div class="bb-item"><img src="img/demo1/0.jpg" alt="image01" /><p class="textoC">' + elem.comen + '</p></div>';
+        });
+    });*/

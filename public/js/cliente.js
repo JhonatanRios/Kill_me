@@ -1,4 +1,4 @@
-// carrito
+// Carrito
 function actualizarCarrito (){
     document.querySelector('.carrito').innerHTML = arreglo.length;
 }
