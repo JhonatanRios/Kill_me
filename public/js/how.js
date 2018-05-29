@@ -79,18 +79,20 @@ var Page = (function () {
 
 })();
 
-Page.init();
-/*
-console.log(arregloc);
 
-fetch('http://localhost:1234/comentarios?id=' + arregloc)
-    .then(function (res) {
-        return res.json();
-    })
-    .then(function (res) {
-        console.log(res);
-        var lista = document.querySelector('.bb-bookblock');
-        res.forEach(function (elem) {
-            lista.innerHTML += '<div class="bb-item"><img src="img/demo1/0.jpg" alt="image01" /><p class="textoC">' + elem.comen + '</p></div>';
-        });
-    });*/
+function enviarDatos(){
+
+    var nameP = document.getElementById('myName').value;
+    var commentP = document.getElementById('comen').value;
+
+    var data = {
+        nombre:nameP,
+        mensaje:commentP
+    }
+
+    $.post("/recibirDatos", data);
+
+    console.log("Data Sent: ", data);
+}
+
+Page.init();

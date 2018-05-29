@@ -86,8 +86,9 @@
                     <p>Numero de comentarios</p>
                     <span class="coment rose">0</span>
                     <br/>
+                    <input type="text" id="myName" placeholder="Nombre">
                     <textarea id="comen" class="comen" name="comentario" rows="5" cols="50" placeholder="Escribe tu Historia: "></textarea>
-                    <button type="submit" id="subir" class="subir">Continue</button>
+                    <button type="submit" id="subir" class="subir" onclick="enviarDatos()">Continue</button>
                 </div>
                 </div>
                 
@@ -102,48 +103,16 @@
                                 <img src="img/1-21.png" alt="">
                             </div>
                         </div>
+                          {{#each result1}}
                         <div class="bb-item">
                             <div class="bb-custom-side">
-                                <p>Soufflé tootsie roll jelly beans. Sweet icing croissant dessert bear claw. Brownie dessert
-                                    cheesecake danish jelly pudding bear claw soufflé.</p>
+                                <p>{{nombre}}</p>
                             </div>
                             <div class="bb-custom-side">
-                                <p>Candy canes lollipop macaroon marshmallow gummi bears tiramisu. Dessert croissant cupcake
-                                    candy canes. Bear claw faworki faworki lemon drops. Faworki marzipan sugar plum jelly-o
-                                    marzipan jelly-o.</p>
+                                <p>{{mensaje}}</p>
                             </div>
                         </div>
-                        <div class="bb-item">
-                            <div class="bb-custom-side">
-                                <p>Croissant pudding gingerbread gummi bears marshmallow halvah. Wafer donut croissant. Cookie
-                                    muffin jelly beans pie croissant croissant candy canes jelly marshmallow.</p>
-                            </div>
-                            <div class="bb-custom-side">
-                                <p>Wafer donut caramels chocolate caramels sweet roll. Gummi bears powder candy chocolate cake
-                                    gummi bears icing wafer cupcake. Brownie cotton candy pastry chocolate wypas.</p>
-                            </div>
-                        </div>
-                        <div class="bb-item">
-                            <div class="bb-custom-side">
-                                <p>Marzipan dragée candy canes chocolate cake. Soufflé faworki jelly gingerbread cupcake. Powder
-                                    gummies applicake.</p>
-                            </div>
-                            <div class="bb-custom-side">
-                                <p>Cotton candy caramels tootsie roll soufflé powder lemon drops carrot cake danish. Cotton
-                                    candy candy canes fruitcake muffin gingerbread. Jujubes soufflé gingerbread donut donut.</p>
-                            </div>
-                        </div>
-                        <div class="bb-item">
-                            <div class="bb-custom-side">
-                                <p>Jujubes fruitcake tiramisu liquorice chocolate cake. Carrot cake faworki donut soufflé oat
-                                    cake tootsie roll. Fruitcake fruitcake cake sweet pie jelly beans. Chocolate cake candy
-                                    jujubes oat cake toffee croissant muffin.</p>
-                            </div>
-                            <div class="bb-custom-side">
-                                <p>Chocolate bar tiramisu marzipan. Croissant soufflé croissant lollipop liquorice dragée chupa
-                                    chups carrot cake. Liquorice lollipop halvah toffee lollipop.</p>
-                            </div>
-                        </div>
+                        {{/each}}
                     </div>
 
                     <nav>

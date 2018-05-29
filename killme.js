@@ -1,7 +1,9 @@
-const MongoClient = require('mongodb').MongoClient
+const MongoClient = require('mongodb').MongoClient,
 ObjectID = require('mongodb').ObjectID,
     express = require('express'),
     engines = require('consolidate');
+
+const bodyParser = require('body-parser');
 
 var app = express(),
     db;
@@ -12,6 +14,12 @@ app.set('views', './views');
 app.set('view engine', 'hbs');
 
 app.use(express.static('public'));
+
+//Define body-parser usage
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+	extended: false
+}));
 
 // Conectarse a Base de Datos
 MongoClient.connect('mongodb://localhost:27017', function (err, client) {
@@ -32,9 +40,16 @@ app.get('/', (req, res) => {
 })
 
 app.get('/how', (req, res) => {
+
+    var prod = db.collection('comments2')
+.find()
+.toArray((err, result) => {
     res.render('how', {
-        tittle: "How I Am"
+        tittle: "How I Am",
+        result1 : result
     });
+});
+    
 })
 
 app.get('/book', (req, res) => {
@@ -118,4 +133,30 @@ app.get('/productosPorIds', (req, res) => {
         .toArray((err, result) => {
             res.send(result);
         });
+});
+
+app.post('/recibirDatos', (request, res) => {
+  var hola = request.body;
+  console.log(hola);
+  
+  db.collection('comments2').insert(request.body);
+
+  res.send("Data Succesfully Submited");
+
+/*
+  var prod = db.collection('comments2')
+.find()
+.toArray((err, result) => {
+    res.send(result);
+});*/
+});
+
+app.get('/enviarDatos', (request, res) => {
+
+var prod = db.collection('comments2')
+.find()
+.toArray((err, result) => {
+    res.send(result);
+});
+
 });
