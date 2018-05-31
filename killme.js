@@ -38,13 +38,13 @@ MongoClient.connect(`mongodb+srv://cluster0-fzipc.mongodb.net/test`, {
 });
 
 /*Esta parte es para cargar las paginas*/
-app.get('/', (req, res) => {
+app.get('/how', (req, res) => {
     res.render('home', {
         tittle: "Home"
     });
 })
 
-app.get('/how', (req, res) => {
+app.get('/', (req, res) => {
 
     var prod = db.collection('comments2')
         .find()
