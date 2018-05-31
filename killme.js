@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient,
-ObjectID = require('mongodb').ObjectID,
+    ObjectID = require('mongodb').ObjectID,
     express = require('express'),
     engines = require('consolidate');
 
@@ -18,17 +18,22 @@ app.use(express.static('public'));
 //Define body-parser usage
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-	extended: false
+    extended: false
 }));
 
 // Conectarse a Base de Datos
-MongoClient.connect('mongodb://localhost:27017', function (err, client) {
+MongoClient.connect(`mongodb+srv://cluster0-fzipc.mongodb.net/test`, {
+    auth: {
+        user: 'kill_me2',
+        password: 'kill_me2'
+    }
+}, function (err, client) {
     if (err) throw err;
 
     db = client.db('test');
 
     // Iniciar servidor
-    app.listen(1234);
+    app.listen(process.env.PORT || 1234);
     console.log("Escuchando servidor")
 });
 
@@ -42,14 +47,14 @@ app.get('/', (req, res) => {
 app.get('/how', (req, res) => {
 
     var prod = db.collection('comments2')
-.find()
-.toArray((err, result) => {
-    res.render('how', {
-        tittle: "How I Am",
-        result1 : result
-    });
-});
-    
+        .find()
+        .toArray((err, result) => {
+            res.render('how', {
+                tittle: "How I Am",
+                result1: result
+            });
+        });
+
 })
 
 app.get('/book', (req, res) => {
@@ -136,27 +141,27 @@ app.get('/productosPorIds', (req, res) => {
 });
 
 app.post('/recibirDatos', (request, res) => {
-  var hola = request.body;
-  console.log(hola);
-  
-  db.collection('comments2').insert(request.body);
+    var hola = request.body;
+    console.log(hola);
 
-  res.send("Data Succesfully Submited");
+    db.collection('comments2').insert(request.body);
 
-/*
-  var prod = db.collection('comments2')
-.find()
-.toArray((err, result) => {
-    res.send(result);
-});*/
+    res.send("Data Succesfully Submited");
+
+    /*
+      var prod = db.collection('comments2')
+    .find()
+    .toArray((err, result) => {
+        res.send(result);
+    });*/
 });
 
 app.get('/enviarDatos', (request, res) => {
 
-var prod = db.collection('comments2')
-.find()
-.toArray((err, result) => {
-    res.send(result);
-});
+    var prod = db.collection('comments2')
+        .find()
+        .toArray((err, result) => {
+            res.send(result);
+        });
 
 });
