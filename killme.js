@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Conectarse a Base de Datos
-MongoClient.connect(`mongodb+srv://kill_me2:kill_me2@cluster0-nrqn7.mongodb.net/test?retryWrites=true`, {
+MongoClient.connect(`mongodb+srv://@cluster0-nrqn7.mongodb.net/test`, {
     auth: {
         user: 'kill_me2',
         password: 'kill_me2'
@@ -38,13 +38,13 @@ MongoClient.connect(`mongodb+srv://kill_me2:kill_me2@cluster0-nrqn7.mongodb.net/
 });
 
 /*Esta parte es para cargar las paginas*/
-app.get('/how', (req, res) => {
+app.get('/', (req, res) => {
     res.render('home', {
         tittle: "Home"
     });
 })
 
-app.get('/', (req, res) => {
+app.get('/how', (req, res) => {
 
     var prod = db.collection('comments2')
         .find()
