@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Conectarse a Base de Datos
-MongoClient.connect(`mongodb+srv://kill_me2:<PASSWORD>@cluster0-nrqn7.mongodb.net/test?retryWrites=true`, {
+MongoClient.connect(`mongodb+srv://kill_me2:kill_me2@cluster0-nrqn7.mongodb.net/test?retryWrites=true`, {
     auth: {
         user: 'kill_me2',
         password: 'kill_me2'
