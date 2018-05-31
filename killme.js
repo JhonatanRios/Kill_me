@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 
 app.get('/how', (req, res) => {
 
-    var prod = db.collection('comments2')
+    var prod = db.collection('comments3')
         .find()
         .toArray((err, result) => {
             res.render('how', {
@@ -144,7 +144,7 @@ app.post('/recibirDatos', (request, res) => {
     var hola = request.body;
     console.log(hola);
 
-    db.collection('comments2').insert(request.body);
+    db.collection('comments3').insert(request.body);
 
     res.send("Data Succesfully Submited");
 
@@ -158,7 +158,7 @@ app.post('/recibirDatos', (request, res) => {
 
 app.get('/enviarDatos', (request, res) => {
 
-    var prod = db.collection('comments2')
+    var prod = db.collection('comments')
         .find()
         .toArray((err, result) => {
             res.send(result);

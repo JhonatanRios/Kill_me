@@ -59,23 +59,25 @@
 
         </section>
         <section class="otracosa">
-            <div class="cont-img-aut">
-                <img src="img\thumbs\author.png" width="226" class="img" />
-            </div>
+            
             <div class="cont-desc-aut">
                 <div class="cont-dos-desc-aut">
                     <h1 class="til">Melanie Cockcroft</h1>
-                <p>Melanie Cockcroft Diaz was born the 20th of September 1996 in Cali, Colombia but has a British nationality.
-                    Ever since she was little, she had a passion for traveling and discovering new things about the world
-                    around her. At first, she did not enjoy reading and writing since she preferred to gain experience first-hand,
-                    however, as many years went by she came to love it. She has entered in school writing competitions and
-                    has had positive criticism on the depth and diversity of her writing styles despite having dyslexia.
-                    Her fluency in English and Spanish, along with her knowledge of other languages and cultures, give her
-                    characters a complex thought pattern that seems straight at first glance. As the first book she has ever
-                    published, she was unable to contract a professional model for the book and decided to portrait herself
-                    instead.</p>
+                    <p>Melanie Cockcroft Diaz was born the 20th of September 1996 in Cali, Colombia but has a British nationality.
+                        Ever since she was little, she had a passion for traveling and discovering new things about the world
+                        around her. At first, she did not enjoy reading and writing since she preferred to gain experience
+                        first-hand, however, as many years went by she came to love it. She has entered in school writing
+                        competitions and has had positive criticism on the depth and diversity of her writing styles despite
+                        having dyslexia. Her fluency in English and Spanish, along with her knowledge of other languages
+                        and cultures, give her characters a complex thought pattern that seems straight at first glance.
+                        As the first book she has ever published, she was unable to contract a professional model for the
+                        book and decided to portrait herself instead.
+                    </p>
                 </div>
-                
+
+            </div>
+            <div class="cont-img-aut">
+                <img src="img\thumbs\author.png" width="226" class="img" />
             </div>
 
         </section>
@@ -83,15 +85,17 @@
             <div class="container">
                 <div class="cont-comen">
                     <div class="comentario">
-                    <p>Numero de comentarios</p>
-                    <span class="coment rose">0</span>
-                    <br/>
-                    <input type="text" id="myName" placeholder="Nombre">
-                    <textarea id="comen" class="comen" name="comentario" rows="5" cols="50" placeholder="Escribe tu Historia: "></textarea>
-                    <button type="submit" id="subir" class="subir" onclick="enviarDatos()">Continue</button>
+                        <p class="num-comen">Numero de comentarios</p>
+                        <span class="coment rose">0</span>
+                        <br/>
+                        <input type="text" id="myName" placeholder="Nombre">
+                        <textarea id="comen" class="comen" name="comentario" rows="5" cols="50" placeholder="Escribe tu Historia: "></textarea>
+                        <div class="cont-button-subir">
+                            <button type="submit" id="subir" class="subir" onclick="enviarDatos()">Continue</button>
+                        </div>
+                    </div>
                 </div>
-                </div>
-                
+
                 <div class="bb-custom-wrapper">
 
                     <div id="bb-bookblock" class="bb-bookblock">
@@ -103,14 +107,24 @@
                                 <img src="img/1-21.png" alt="">
                             </div>
                         </div>
-                          {{#each result1}}
+                        {{#each result1}}
                         <div class="bb-item">
+
                             <div class="bb-custom-side">
-                                <p>{{nombre}}</p>
+                               
+                                <img class="fondoLib" src="img/galery/1-15.jpg" alt="">
+                                
                             </div>
                             <div class="bb-custom-side">
+                               
+                                <h1>{{nombre}}</h1>
                                 <p>{{mensaje}}</p>
+                                
                             </div>
+                            
+                            <!--   <div class="bb-custom-side">
+                                <p>{{mensaje}}</p>
+                            </div>  -->
                         </div>
                         {{/each}}
                     </div>
@@ -123,7 +137,7 @@
                     </nav>
 
                 </div>
-                
+
             </div>
         </section>
         <section class="regis">

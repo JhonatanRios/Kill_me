@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");
-
 $white: #FFF;
 $black: #000;
 $slide: #efd2ca;
@@ -10,108 +9,136 @@ $blue: #3e8edd;
 $gray: #cecece;
 $graydark: #4f4f4f;
 * {
-    font-family: "Nunito", sans-serif;
+	font-family: "Nunito", sans-serif;
 }
-
-
 
 p {
-    font-size: 18px;
-    margin-bottom: 1em;
+	font-size: 18px;
+	margin-bottom: 1em;
 }
 
-
-.otracosa{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: stretch;
-    align-items: flex-start;
-    .cont-img-aut{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-content: stretch;
-        align-items: flex-start;
-        width: 30%;
-        .img{
-            width: 100%;
-        }
-    }
-   .cont-desc-aut{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: stretch;
-    align-items: flex-start;
-    width: 70%;
-    .cont-dos-desc-aut{
-        width: 90%;
-        padding: 5% 25% 0 5%;
-        .til{
-            width: 100%;
-            color: $rose;
-            font-size: 18px;
-            padding: 3% 0;
-            font-weight: 700;
-        }
-    
-        p{
-            width: 100%;
-            line-height: 14pt;
-        }
-    }
-    
-   }
-   
+.otracosa {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	.cont-img-aut {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: stretch;
+		align-items: flex-start;
+		width: 35%;
+		padding-right: 8%;
+		.img {
+			width: 100%;
+		}
+	}
+	.cont-desc-aut {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		width: 60%;
+		.cont-dos-desc-aut {
+			width: 60%;
+			//padding: 5% 0 5% 0;
+			.til {
+				width: 100%;
+				color: $rose;
+				text-align: center;
+				font-size: 30px;
+				padding: 5% 0 10% 0;
+				font-weight: 700;
+			}
+			p {
+				text-align: right;
+				width: 100%;
+				line-height: 16pt;
+				padding-bottom: 10%;
+			}
+		}
+	}
 }
-.container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: stretch;
-    align-items: flex-start;
-    .cont-comen{
-        height: 600px;
-        display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    .comentario{
-        width: 80%;
-        height: 100%;
-    }
-    }
+
+.container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	width: 100%;
+	.cont-comen {
+		width: 50%;
+		height: 500px;
+		display: flex;
+		//margin-top: 10%;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		.comentario {
+			width: 95%;
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: flex-start;
+			align-items: center;
+
+			.num-comen{
+				padding: 5%;
+			}
+			#myName {
+				width: 90%;
+				height: 40px;
+				margin-bottom: 5%;
+				padding-left: 3%;
+			}
+			.comen {
+				width: 90%;
+				height: 300px;
+				margin-bottom: 5%;
+				padding: 3% 0 0 3%;
+			}
+			.cont-button-subir {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-content: center;
+				align-items: center;
+			}
+		}
+	}
 }
 
 .interaction {
-    background: $gray;
-    width: 100%;
+	background: $gray;
+	width: 100%;
 }
 
 @font-face {
 	font-family: 'arrows';
-	src:url('../fonts/arrows/arrows.eot');
-	src:url('../fonts/arrows/arrows.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/arrows/arrows.woff') format('woff'),
-		url('../fonts/arrows/arrows.ttf') format('truetype'),
-		url('../fonts/arrows/arrows.svg#arrows') format('svg');
+	src: url('../fonts/arrows/arrows.eot');
+	src: url('../fonts/arrows/arrows.eot?#iefix') format('embedded-opentype'), url('../fonts/arrows/arrows.woff') format('woff'), url('../fonts/arrows/arrows.ttf') format('truetype'), url('../fonts/arrows/arrows.svg#arrows') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 .bb-custom-wrapper {
 	width: 100%;
-    height: 603px;
-    margin: 5em 1em 5em 1px;
-
+	height: 603px;
+	margin: 5em 1em 5em 1px;
 }
 
 .bb-custom-wrapper .bb-bookblock {
@@ -126,7 +153,8 @@ p {
 	float: left;
 	height: 100%;
 	overflow: hidden;
-	background: #fff;
+	background: rgb(255, 248, 235);
+	background-size: cover;
 	/* Centering with flexbox */
 	display: -webkit-box;
 	display: -moz-box;
@@ -144,24 +172,40 @@ p {
 	-moz-box-align: center;
 	-webkit-align-items: center;
 	align-items: center;
+	h1 {
+		font-size: 20px;
+		font-weight: 700;
+		width: 100%;
+		text-align: center;
+		color: $rose; //margin: 5%;
+	}
+	p {
+		font-size: 16px;
+		margin: 0 12%;
+		text-align: center;
+		line-height: 16pt;
+	}
+	.fondoLib {
+		width: 100%; //height: 100%;
+		padding: 5%;
+	}
 }
-
-
 
 .bb-custom-firstpage {
 	text-align: center;
 	padding-top: 15%;
-    width: 50%;
-    background: $gray;
+	width: 50%;
+	background: $gray;
 	float: left;
 	height: 100%;
 }
 
+/*
 .bb-custom-side p {
 	padding: 8%;
 	font-size: 1.8em;
 	font-weight: 300;
-}
+} */
 
 .bb-custom-wrapper h3 {
 	font-size: 1.4em;
@@ -169,17 +213,16 @@ p {
 	margin: 0.4em 0 1em;
 }
 
-.bb-custom-wrapper > nav {
+.bb-custom-wrapper>nav {
 	width: 100%;
 	height: 40px;
 	margin: 1em auto 0;
-	position: relative;
-	bottom: 20px;
+	position: relative; //bottom: 20px;
 	z-index: 1000;
 	text-align: center;
 }
 
-.bb-custom-wrapper > nav a {
+.bb-custom-wrapper>nav a {
 	display: inline-block;
 	width: 40px;
 	height: 40px;
@@ -191,7 +234,7 @@ p {
 	margin: 2px;
 }
 
-.bb-custom-wrapper > nav a:hover {
+.bb-custom-wrapper>nav a:hover {
 	opacity: 0.6;
 }
 
@@ -226,6 +269,7 @@ p {
 }
 
 /* No JS */
+
 .no-js .bb-custom-wrapper {
 	height: auto;
 }
@@ -234,15 +278,14 @@ p {
 	height: 470px;
 }
 
-@media screen and (max-width: 61.75em){
+@media screen and (max-width: 61.75em) {
 	.bb-custom-side {
 		font-size: 70%;
 	}
 }
 
-@media screen and (max-width: 33em){
+@media screen and (max-width: 33em) {
 	.bb-custom-side {
 		font-size: 60%;
 	}
 }
-
