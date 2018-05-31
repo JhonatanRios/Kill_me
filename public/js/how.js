@@ -80,19 +80,31 @@ var Page = (function () {
 })();
 
 
-function enviarDatos(){
+function enviarDatos() {
 
     var nameP = document.getElementById('myName').value;
     var commentP = document.getElementById('comen').value;
 
     var data = {
-        nombre:nameP,
-        mensaje:commentP
+        nombre: nameP,
+        mensaje: commentP
     }
 
     $.post("/recibirDatos", data);
 
     console.log("Data Sent: ", data);
+
+    swal({
+        title: "Historia Creada!",
+        text: "Da click en OK para refrescar la página y ver tu historia al interior del libro.",
+        imageUrl: 'http://bestanimations.com/Books/page-turning-book-animation-17.gif'
+
+    });
+
+    document.getElementById('confirm').onclick = function () {
+        location.reload();
+    }
+
 }
 
 Page.init();
