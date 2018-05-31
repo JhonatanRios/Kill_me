@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");
+.enlaces .tienda {
+  padding: 0.7em;
+  width: 3em;
+  height: 1.6em;
+}
+
+body {
+  background: #ebe9e9;
+}
+
+.cuerpo {
+  font-family: nunito;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.cuerpo .formulario {
+  width: 43em;
+  height: 100vh;
+  position: fixed;
+  background: #FFF;
+  padding-top: 8%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: flex-start;
+}
+
+.cuerpo .formulario .cont-form {
+  width: 60%;
+}
+
+.cuerpo .formulario .cont-form .tit-form {
+  font-size: 2em;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.cuerpo .formulario .cont-form .name-form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-items: center;
+  align-content: center;
+}
+
+.cuerpo .formulario .cont-form .name-form .firstName {
+  width: 48%;
+}
+
+.cuerpo .formulario .cont-form .name-form .firstName .firstNameTitle {
+  font-size: 1em;
+  padding: 1em 0 0.5em 0;
+}
+
+.cuerpo .formulario .cont-form .name-form .firstName input {
+  width: 100%;
+}
+
+.cuerpo .formulario .cont-form .name-form .lastName {
+  width: 48%;
+}
+
+.cuerpo .formulario .cont-form .name-form .lastName .lastNameTitle {
+  font-size: 1em;
+  padding: 1em 0 0.5em 0;
+}
+
+.cuerpo .formulario .cont-form .name-form .lastName input {
+  width: 100%;
+}
+
+.cuerpo .formulario .cont-form .email-form {
+  width: 100%;
+}
+
+.cuerpo .formulario .cont-form .email-form .email {
+  width: 100%;
+}
+
+.cuerpo .formulario .cont-form .email-form .email .emailAddressTitle {
+  font-size: 1em;
+  padding: 1em 0 0.5em 0;
+}
+
+.cuerpo .formulario .cont-form .email-form .email input {
+  width: 100%;
+}
+
+.cuerpo .formulario .cont-form .country-cont-form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-items: center;
+  align-content: center;
+}
+
+.cuerpo .formulario .cont-form .country-cont-form .country-cont {
+  width: 48%;
+}
+
+.cuerpo .formulario .cont-form .country-cont-form .country-cont .country {
+  font-size: 1em;
+  padding: 1em 0 0.5em 0;
+}
+
+.cuerpo .formulario .cont-form .country-cont-form .country-cont input {
+  width: 100%;
+}
+
+.cuerpo .formulario .cont-form .country-cont-form .city-cont {
+  width: 48%;
+}
+
+.cuerpo .formulario .cont-form .country-cont-form .city-cont .city {
+  font-size: 1em;
+  padding: 1em 0 0.5em 0;
+}
+
+.cuerpo .formulario .cont-form .country-cont-form .city-cont input {
+  width: 100%;
+}
+
+.cuerpo .formulario .total-cont {
+  width: 41em;
+  margin: 1em 0 0 0;
+  padding: 3em 1em;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  background: #EF6F7F;
+}
+
+.cuerpo .formulario .total-cont .total-subcont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 3em;
+  justify-content: space-between;
+  justify-items: center;
+  align-content: center;
+  width: 45%;
+}
+
+.cuerpo .formulario .total-cont .total-subcont .total-tit {
+  width: 50%;
+  display: flex;
+  font-size: 1.5em;
+  color: #FFF;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.cuerpo .formulario .total-cont .total-subcont .total-var {
+  width: 50%;
+  font-size: 1.5em;
+  color: #FFF;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.cuerpo .formulario .total-cont .pagar-cont {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.cuerpo .formulario .total-cont .pagar-cont .pagar {
+  margin: .5em 0;
+  border: none;
+  background: #ff0000;
+  color: #f2f2f2;
+  font-size: 18px;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  padding: 0.6em 2.5em;
+  overflow: hidden;
+}
+
+.cuerpo .carrito {
+  width: 100%;
+  margin-left: 50%;
+  padding-top: 4%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.cuerpo .carrito .lista {
+  width: 100%;
+}
+
+.cuerpo .carrito .lista .librito {
+  background: white;
+  margin-bottom: 0.5em;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.cuerpo .carrito .lista .librito .contp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-items: center;
+  align-content: center;
+  width: 100%;
+  height: 7em;
+}
+
+.cuerpo .carrito .lista .librito .contp .contimagenc {
+  width: 20%;
+}
+
+.cuerpo .carrito .lista .librito .contp .contimagenc .imagenc {
+  width: 100%;
+  height: 100%;
+}
+
+.cuerpo .carrito .lista .librito .contp .continfo {
+  width: 75%;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-items: center;
+  align-content: center;
+}
+
+.cuerpo .carrito .lista .librito .contp .continfo .nomble {
+  height: 7em;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: flex-start;
+  padding: 2em 0;
+}
+
+.cuerpo .carrito .lista .librito .contp .continfo .plecio {
+  width: 20%;
+  height: 7em;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: flex-end;
+  padding: 2em 0;
+}
+
+.cuerpo .carrito .lista .librito .contp .continfo .plecio span {
+  font-weight: 700;
+  color: #EF6F7F;
+  padding-right: 0.5em;
+}
+/*# sourceMappingURL=carrito.css.map */
