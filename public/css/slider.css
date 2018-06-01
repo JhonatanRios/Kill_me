@@ -51,7 +51,7 @@
 	width: 100px;
 	height: 100px;
 	margin: -25px 0 0 0;
-	background-color: #5104ab;
+	background-color: #3e8edd;
 	color: #fff;
 	font-family: inherit;
 	font-weight: bold;
@@ -61,7 +61,7 @@
 }
 
 .pieces-slider__button:hover {
-	background: #5f3abf;
+	background: #3e8edd;
 }
 
 .pieces-slider__button--next {
