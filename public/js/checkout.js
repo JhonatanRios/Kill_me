@@ -1,6 +1,6 @@
 console.log(arreglo);
 
-fetch('http://localhost:1234/productosPorIds?id=' + arreglo)
+fetch('https://killme2.herokuapp.com/productosPorIds?id=' + arreglo)
     .then(function (res) {
         return res.json();
     })
