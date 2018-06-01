@@ -79,7 +79,6 @@ p {
 		width: 50%;
 		height: 500px;
 		display: flex;
-		//margin-top: 10%;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: center;
@@ -87,21 +86,24 @@ p {
 		align-items: center;
 		.comentario {
 			width: 95%;
-			height: 100%;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: center;
-			align-content: flex-start;
+			align-content: center;
 			align-items: center;
 
-			.num-comen{
-				padding: 5%;
+			.desc-comen{
+				padding: 0 8%;
+				font-size: 18px;
+				line-height: 20pt;
+				color: $graydark;
+				text-align: center;
 			}
 			#myName {
 				width: 90%;
 				height: 40px;
-				margin-bottom: 5%;
+				margin: 5% 0;
 				padding-left: 3%;
 			}
 			.comen {
@@ -172,22 +174,23 @@ p {
 	-moz-box-align: center;
 	-webkit-align-items: center;
 	align-items: center;
+	padding: 5%;
 	h1 {
 		font-size: 20px;
 		font-weight: 700;
 		width: 100%;
 		text-align: center;
-		color: $rose; //margin: 5%;
+		color: $rose; 
 	}
 	p {
 		font-size: 16px;
-		margin: 0 12%;
+
 		text-align: center;
 		line-height: 16pt;
 	}
 	.fondoLib {
-		width: 100%; //height: 100%;
-		padding: 5%;
+		width: 100%; 
+		
 	}
 }
 

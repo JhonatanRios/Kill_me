@@ -86,23 +86,26 @@ p {
 
 .container .cont-comen .comentario {
   width: 95%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-start;
+  align-content: center;
   align-items: center;
 }
 
-.container .cont-comen .comentario .num-comen {
-  padding: 5%;
+.container .cont-comen .comentario .desc-comen {
+  padding: 0 8%;
+  font-size: 18px;
+  line-height: 20pt;
+  color: #4f4f4f;
+  text-align: center;
 }
 
 .container .cont-comen .comentario #myName {
   width: 90%;
   height: 40px;
-  margin-bottom: 5%;
+  margin: 5% 0;
   padding-left: 3%;
 }
 
@@ -172,6 +175,7 @@ p {
   -moz-box-align: center;
   -webkit-align-items: center;
   align-items: center;
+  padding: 5%;
 }
 
 .bb-custom-side h1 {
@@ -184,14 +188,12 @@ p {
 
 .bb-custom-side p {
   font-size: 16px;
-  margin: 0 12%;
   text-align: center;
   line-height: 16pt;
 }
 
 .bb-custom-side .fondoLib {
   width: 100%;
-  padding: 5%;
 }
 
 .bb-custom-firstpage {
