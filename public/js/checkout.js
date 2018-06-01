@@ -23,9 +23,7 @@ function tomarDatos(e) {
     swal("Thanks for Buying!", "Check your Name: " + nombre, "success");
 }
 
-document.getElementById('eliminar').addEventListener('click', elimina);
-
-function elimina(e) {
-    e.preventDefault();
+document.getElementById('eliminar').onclick = function () {
     localStorage.clear(".arreglo");
+    location.reload();
 }
