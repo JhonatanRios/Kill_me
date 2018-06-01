@@ -36,6 +36,17 @@
     <!--Links para Slider de fotos-->
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" type="text/css" href="css/slider.css" />
+
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function () {
+            var e, t = document.createElement("style");
+            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS &&
+                window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(
+                t), e
+        };
+        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+    </script>
 </head>
 
 <body>
@@ -216,17 +227,6 @@
             </a>
         </div>
     </footer>
-
-    <script>
-        document.documentElement.className = "js";
-        var supportsCssVars = function () {
-            var e, t = document.createElement("style");
-            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS &&
-                window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(
-                t), e
-        };
-        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
-    </script>
 
     <script src="js/jquery-3.3.1.js"></script>
     <!--JS de Menu-->
