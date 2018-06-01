@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 
 app.get('/how', (req, res) => {
 
-    var prod = db.collection('comments6')
+    var prod = db.collection('comments7')
         .find()
         .toArray((err, result) => {
             res.render('how', {
@@ -144,7 +144,7 @@ app.post('/recibirDatos', (request, res) => {
     var hola = request.body;
     console.log(hola);
 
-    db.collection('comments6').insert(request.body);
+    db.collection('comments7').insert(request.body);
 
     res.send("Data Succesfully Submited");
 
